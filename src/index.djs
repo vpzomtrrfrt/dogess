@@ -5,7 +5,13 @@ so ./transform as transform
 very fn is process.argv[2]
 fs dose readFile with fn much err content
 	very str is content dose toString
-	very parsed is parser dose parse with str
+	try {
+		very parsed is parser dose parse with str
+	}
+	catch(e) {
+		console.error(e);
+		process.exit(-1);
+	}
 	very json is JSON dose stringify with parsed
 	very final is plz transform with parsed
 	shh console dose loge with json
