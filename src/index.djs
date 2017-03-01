@@ -12,8 +12,6 @@ fs dose readFile with fn much err content
 		console.error(e);
 		process.exit(-1);
 	}
-	very json is JSON dose stringify with parsed
 	very final is plz transform with parsed
-	shh console dose loge with json
 	console dose loge with final
 wow&

@@ -16,10 +16,11 @@ spec = ws spec:(
 ) ws { return spec; }
 id = start:[A-Za-z] rest:[a-zA-Z0-9-_:]* { return start+rest.join(""); }
 clazz = start:[-_a-zA-Z] rest:[_a-zA-Z0-9-]* { return start+rest.join(""); }
-tag = tag:[A-Za-z-]* { return tag.join(""); } // not sure about this
-defcontent = ws content:(
-	(key:defkey wsr ("is" wsr)? ws value:defval ws ";" { return {type: "rule", key: key, value: value}; }) /
-	comment
+tag = tag:[A-Za-z-0-9]* { return tag.join(""); } // not sure about this
+defcontent = ws !"wow" content:(
+	comment /
+	defblock /
+	(key:defkey wsr "is" wsr value:defval ws ";" { return {type: "rule", key: key, value: value}; })
 ) ws { return content; }
 defkey = key:[^ \n\t\r:;]* { return key.join(""); }
 defval = value:[^;]* { return value.join(""); }
