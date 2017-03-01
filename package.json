@@ -1,0 +1,28 @@
+{
+  "name": "dogess",
+  "version": "0.1.0",
+  "description": "Doge-themed CSS preprocessor",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpzomtrrfrt/dogess.git"
+  },
+  "keywords": [
+    "css",
+    "dogescript"
+  ],
+  "author": "VpzomTrrfrt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpzomtrrfrt/dogess/issues"
+  },
+  "homepage": "https://github.com/vpzomtrrfrt/dogess#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-dogescript": "^0.1.0",
+    "gulp-pegjs": "github:tapmodo/gulp-pegjs"
+  }
+}
